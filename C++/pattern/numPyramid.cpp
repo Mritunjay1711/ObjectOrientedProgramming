@@ -14,18 +14,18 @@ int main(){
     
     for(int i = 0; i < r; i++)
     {
-        int n = 1;
+        int n = 0;
         for(int j = 0; j < r - i - 1; j++)
         {
             cout<<" ";
         }
-        for(int j = (r - i - 1); j < r; j++, n++)
+        for(int j = (r - i - 1); j < r; j++)
         {
-            cout<<n;
+            cout<<++n;
         }
-        for(int j = r; j < r + i; j++, n--)
+        for(int j = r; j < r + i; j++)
         {
-            cout<<n - 2;
+            cout<<--n;
         }
         cout<<"\n";
     }

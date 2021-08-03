@@ -59,6 +59,8 @@ void findRoll(struct student s_26[], int n_26, int roll_26)
             printf("Total marks: %.2f\n", s_26[i_26].total);
             printf("Percentage : %.2f\n", s_26[i_26].percent);
         }
+        else
+            printf("Not Found!");
     }
 }
 
@@ -80,6 +82,8 @@ void findPercent(struct student s_26[], int n_26, int lower_26, int upper_26)
             printf("Total marks: %.2f\n", s_26[i_26].total);
             printf("Percentage : %.2f\n", s_26[i_26].percent);
         }
+        else    
+            printf("Not found!");
     }
 }
 
@@ -109,15 +113,15 @@ int main()
 {
     int n_26;
     printf("Enter the number of students: ");
-    scanf("%d\n", &n_26);
+    scanf("%d", &n_26);
     struct student s_26[n_26];
-    printf("Enter the details of students:\n");
+    printf("\nEnter the details of students:\n");
     for (int i_26 = 0; i_26 < n_26; i_26++)
     {
         printf("Enter the name of student %d:", i_26 + 1);
-        scanf("%s", s_26[i_26].name);
+        scanf(" %[^\n]", s_26[i_26].name);
         printf("Enter the roll of student %d:", i_26 + 1);
-        scanf(" %d", &s_26[i_26].roll);
+        scanf("%d", &s_26[i_26].roll);
         printf("Enter the marks of 5 subjects: ");
         for (int j_26 = 0; j_26 < 5; j_26++)
         {
@@ -126,7 +130,10 @@ int main()
     }
 
     calcPerTotal(s_26, n_26);
-    findRoll(s_26, n_26, 3);
+    int roll_26;
+    printf("Enter the roll you want to search: ");
+    scanf("%d", &roll_26);
+    findRoll(s_26, n_26, roll_26);
     findPercent(s_26, n_26, 60, 70);
     printStruct(s_26, n_26);
     sortAscend(s_26, n_26);

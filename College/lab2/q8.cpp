@@ -14,7 +14,6 @@ class bank_account
         void deposit();
         void withdraw();
         void display();
-
 };
 
 int bank_account :: checkBalance(int amount)

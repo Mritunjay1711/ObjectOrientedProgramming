@@ -11,31 +11,28 @@ class student_26
     float total_marks;
 
 public:
-    void getData();
-    void display();
+    void setData(char *p, int r, int *mark);
+    void display() const;
     void calcPerTotal();
 };
 
-void student_26 :: getData()
+void student_26 :: setData(char *p, int r, int *mark)
 {
-    cout<< "Enter the name: ";
-    gets(name);
-    cout << "Enter the roll: ";
-    cin >> roll;
+    strcpy(name, p);
+    roll = r;
     for(int i = 0; i < 5; i++)
     {
-        cout << "Enter the marks of sub "<< i + 1 << " : ";
-        cin >> marks[i];
+        marks[i] = mark[i];
     }
 }
-
-void student_26 :: display()
+  
+void student_26 :: display() const
 {
     cout << "Name : " << name << endl;
     cout << "Roll : " << roll << endl;
     for(int i = 0; i < 5; i++)
     {
-        cout<< "Marks["<<i + 1<<"] : "<<marks[i]<<endl;
+        cout<< "Marks[" << i + 1 << "] : " << marks[i] <<endl;
     }
     cout << "Total marks : " << total_marks << endl;
     cout << "Percentage : " << percent << endl;
@@ -55,7 +52,19 @@ void student_26 :: calcPerTotal()
 int main()
 {
     student_26 s_26;
-    s_26.getData();
+    int roll, marks[5];
+    char name[20];
+    cout<< "Enter the name: ";
+    gets(name);
+    cout << "Enter the roll: ";
+    cin >> roll;
+    for(int i = 0; i < 5; i++)
+    {
+        cout << "Enter the marks of sub " << i + 1 << " : ";
+        cin >> marks[i];
+    }
+
+    s_26.setData(name, roll, marks);
     s_26.calcPerTotal();
     s_26.display();
     return 0;

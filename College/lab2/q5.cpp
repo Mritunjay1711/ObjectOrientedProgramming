@@ -8,7 +8,7 @@ class distance_26
 
     public:
         void setData(int f, int i);
-        void display();
+        void display() const;
         void add(distance_26 d1, distance_26 d2);
 };
 
@@ -18,7 +18,7 @@ void distance_26 :: setData(int f, int i)
     inches = i;
 }
 
-void distance_26 :: display()
+void distance_26 :: display() const
 {
     cout << feet << "feet " << inches << "inches"<<endl;
 }

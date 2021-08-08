@@ -12,7 +12,7 @@ class point_26
             x = a;
             y = b;
         }
-        void display();
+        void display() const;
         double dis(point_26 p, point_26 q);
 };
 
@@ -21,6 +21,11 @@ double point_26 :: dis(point_26 p, point_26 q)
     double distance_26;
     distance_26 = sqrt(((p.x - q.x) * (p.x - q.x)) + ((p.y - q.y) * (p.y - q.y)));
     return distance_26;
+}
+
+void point_26 :: display() const
+{
+    cout << "Coordinates: (" << x << ", " << y << ")" << endl;
 }
 
 int main(){
@@ -34,7 +39,9 @@ int main(){
     p1_26.setData(a_26, b_26);
     p2_26.setData(c_26, d_26);
     distance_26 = p2_26.dis(p1_26, p2_26);
-    cout << distance_26;
+    p1_26.display();
+    p2_26.display();
+    cout << "Distance between points are " << distance_26 << endl;
     return 0;
 }
  

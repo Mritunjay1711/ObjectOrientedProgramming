@@ -10,7 +10,7 @@ class student_26
 
     public:
         void setData(char *p, int r, int to);
-        void display()
+        void display() const
         {
             cout<<"Name : "<<name<<endl;
             cout<<"Roll : "<<roll<<endl;

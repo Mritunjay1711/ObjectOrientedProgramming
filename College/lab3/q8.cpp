@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//Pass by value
 void swap(int a, int b)
 {
     cout << "This is swap by value: " << endl;
@@ -12,6 +13,7 @@ void swap(int a, int b)
     cout << "The value of b is " << b << endl;
 }
 
+//Pass by address
 void swap(int *a, int *b)
 {
     cout << "This is swap by address: " << endl;
@@ -21,19 +23,20 @@ void swap(int *a, int *b)
 }
 
 //Pass by reference
-// void swap(int &a, int &b)
-// {
-//     cout << "This is swap by reference: " << endl;
-//     int temp = a;
-//     a = b;
-//     b = temp;
-//     cout << "Reference one" << endl;
-// }
+void swapbyRef(int &a, int &b)
+{
+    cout << "This is swap by reference: " << endl;
+    int temp = a;
+    a = b;
+    b = temp;
+}
 
 int main(){
     int a_26 = 10, b_26 = 20;
     swap(a_26, b_26);
     swap(&a_26, &b_26);
     cout << "The value after swapping are a = " << a_26 << " and b = " << b_26 << endl ;
+    swapbyRef(a_26, b_26);
+    cout << "The value after swapping again are a = " << a_26 << " and b = " << b_26 << endl ;
     return 0;
 }

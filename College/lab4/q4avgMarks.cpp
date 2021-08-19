@@ -8,7 +8,7 @@ class Student{
     float total_marks_26;
     static float avg_26;
     public:
-        friend float Average(Student *s, int n);
+        friend void Average(Student *s, int n);
         void setData(char *p, int r, float tot)
         {
             strcpy(name_26, p);
@@ -27,13 +27,13 @@ class Student{
 
 float Student :: avg_26;
 
-float Average(Student *s, int n){
+void Average(Student *s, int n){
     float t = 0;
     for(int i = 0; i < n; i++)
         t += s[i].total_marks_26;
     
     Student::avg_26 = t/n;
-    return Student :: avg_26;
+    cout << "The average marks scored by students is " << Student :: avg_26 << endl;
 }
 
 
@@ -55,7 +55,6 @@ int main(){
         cin >> marks_26;
         ob_26[i].setData(name_26, roll_26, marks_26);
     }
-
-    cout << "The average marks scored by students is " << Average(ob_26, n_26) << endl;
+    Average(ob_26, n_26);
     return 0;
 }

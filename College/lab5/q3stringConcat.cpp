@@ -3,53 +3,58 @@
 using namespace std;
 
 class myStr{
-    char *str;
-    int len;
+    char *str_26;
+    int len_26;
     public:
         myStr(){
-            str = new char[1];
-            len = 0;
+            str_26 = new char[1];
+            len_26 = 0;
         }
         myStr(char *s)
         {
-            len =  strlen(s);
-            str = new char[len + 1];
-            strcpy(str, s);
+            len_26 =  strlen(s);
+            str_26 = new char[len_26 + 1];
+            strcpy(str_26, s);
         }
 
         myStr(const myStr &o)
         {
-            len = o.len;
-            str = new char[o.len + 1];
-            strcpy(str, o.str);
+            len_26 = o.len_26;
+            str_26 = new char[o.len_26 + 1];
+            strcpy(str_26, o.str_26);
         }
 
         void display()
         {
-            cout << str << endl;
+            cout << str_26 << endl;
         }
         void concat(myStr o1, myStr o2);
+        
+        ~myStr()
+        {
+            delete[] str_26;
+        }
 };
 
 void myStr :: concat(myStr o1, myStr o2)
 {
-    len = strlen(o1.str) + strlen(o2.str);
-    delete[] str; 
-    str = new char[len + 1];
-    strcpy(str, o1.str);
-    strcat(str, o2.str);
+    len_26 = strlen(o1.str_26) + strlen(o2.str_26);
+    delete[] str_26; 
+    str_26 = new char[len_26 + 1];
+    strcpy(str_26, o1.str_26);
+    strcat(str_26, o2.str_26);
 }
 
 int main(){
-    char str[30];
+    char str_26[30];
     cout << "Enter the first string: ";
-    gets(str);
-    myStr s1(str);
+    gets(str_26);
+    myStr s1_26(str_26);
     cout << "Enter the second string: ";
-    gets(str);
-    myStr s2(str);
-    myStr s3;
-    s3.concat(s1, s2);
-    s3.display();
+    gets(str_26);
+    myStr s2_26(str_26);
+    myStr s3_26;
+    s3_26.concat(s1_26, s2_26);
+    s3_26.display();
     return 0;
 }

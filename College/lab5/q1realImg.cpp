@@ -2,36 +2,36 @@
 using namespace std;
 
 class complex{
-    int real, img;
+    int real_26, img_26;
     public:
         complex(){
-            real = 0;
-            img = 0;
+            real_26 = 0;
+            img_26 = 0;
         }
         complex(int a, int b)
         {
-            real = a;
-            img = b;
+            real_26 = a;
+            img_26 = b;
         }
         complex(const complex &o)
         {
-            real = o.real;
-            img = o.img;
+            real_26 = o.real_26;
+            img_26 = o.img_26;
         }
 
         void display()
         {
-            cout << real << " + " << img << "i" << endl;
+            cout << real_26 << " + " << img_26 << "i" << endl;
         }
 };
 
 int main(){
-    complex ob1;
-    complex ob2(10, 20);
-    complex ob3(ob2);
+    complex ob1_26;
+    complex ob2_26(10, 20);
+    complex ob3_26(ob2_26);
 
-    ob1.display();
-    ob2.display();
-    ob3.display();
+    ob1_26.display();
+    ob2_26.display();
+    ob3_26.display();
     return 0;
 }

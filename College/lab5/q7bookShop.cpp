@@ -30,6 +30,13 @@ class Books{
             cout << "Stock: " << stock << endl;
         }
         friend void search(Books *b, int n, char *t, char *a);
+
+        ~Books()
+        {
+            delete[] title;
+            delete[] author;
+            delete[] publisher;
+        }
 };
 
 void search(Books *b, int n, char *t, char *a)
@@ -56,37 +63,37 @@ void search(Books *b, int n, char *t, char *a)
 }
 
 int main(){
-    int n, stock;
-    float price;
-    char title[30], author[30], publisher[30];
+    int n_26, stock_26;
+    float price_26;
+    char title_26[30], author_26[30], publisher_26[30];
     cout << "Enter the number of books: ";
-    cin >> n;
-    Books arr[n];
-    for(int i = 0; i < n; i++)
+    cin >> n_26;
+    Books arr_26[n_26];
+    for(int i = 0; i < n_26; i++)
     {
         cout << "Enter the name of book: ";
         getchar();
-        gets(title);
+        gets(title_26);
         cout << "Enter the name of author: ";
         getchar();
-        gets(author);
+        gets(author_26);
         cout << "Enter the price of book: ";
-        cin >> price;
+        cin >> price_26;
         cout << "Enter the name of publisher: ";
         getchar();
-        gets(publisher);
+        gets(publisher_26);
         cout << "Enter the stock present: ";
-        cin >> stock;
-        arr[i].setData(title, author, price, publisher, stock);
+        cin >> stock_26;
+        arr_26[i].setData(title_26, author_26, price_26, publisher_26, stock_26);
     }
-    char sTitle[30], sAuthor[30];
+    char sTitle_26[30], sAuthor_26[30];
     cout << "Enter the name of book to search: ";
     getchar();
-    gets(sTitle);
+    gets(sTitle_26);
     cout << "Enter the name of author to search: ";
     getchar();
-    gets(sAuthor);
-    search(arr, n, sTitle, sAuthor);
+    gets(sAuthor_26);
+    search(arr_26, n_26, sTitle_26, sAuthor_26);
     return 0;
 }
 

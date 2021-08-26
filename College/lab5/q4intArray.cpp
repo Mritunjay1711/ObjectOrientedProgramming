@@ -67,30 +67,30 @@ void myArr ::concatArray(myArr o1, myArr o2)
 
 int main()
 {
-    int arr[30], n;
+    int arr_26[30], n_26;
     cout << "Enter the number of elements of array 1: ";
-    cin >> n;
+    cin >> n_26;
     cout << "Enter the elements: ";
-    for(int i = 0; i < n; i++)
+    for(int i_26 = 0; i_26 < n_26; i_26++)
     {
-        cin >> arr[i];
+        cin >> arr_26[i_26];
     }
-    myArr a1(arr, n);
+    myArr a1_26(arr_26, n_26);
 
     cout << "Enter the number of elements of array 2: ";
-    cin >> n;
+    cin >> n_26;
     cout << "Enter the elements: ";
-    for(int i = 0; i < n; i++)
+    for(int i_26 = 0; i_26 < n_26; i_26++)
     {
-        cin >> arr[i];
+        cin >> arr_26[i_26];
     }
-    myArr a2(arr, n);
-    myArr a3;
-    a3.concatArray(a1, a2);
+    myArr a2_26(arr_26, n_26);
+    myArr a3_26;
+    a3_26.concatArray(a1_26, a2_26);
     
-    a1.display();
-    a2.display();
-    a3.display();
+    a1_26.display();
+    a2_26.display();
+    a3_26.display();
 
     return 0;
 }

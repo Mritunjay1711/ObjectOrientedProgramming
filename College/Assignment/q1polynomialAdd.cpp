@@ -93,5 +93,6 @@ int main(){
     o1.display();
     o2.display();
     o3.display();
+    o3.display();
     return 0;
 }

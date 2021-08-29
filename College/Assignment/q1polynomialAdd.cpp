@@ -6,11 +6,7 @@ class polynomial
     int n;
     int *arr;
     public:
-        polynomial()
-        {
-            n = 0;
-            arr = new int[1];
-        }
+        polynomial(){}
 
         polynomial(int *array, int len)
         {
@@ -48,51 +44,80 @@ class polynomial
         }
 
         void add(polynomial p1, polynomial p2);
+        void multiply(polynomial p1, polynomial p2);
 };
 
 void polynomial :: add(polynomial p1, polynomial p2)
 {
     n = (p1.n > p2.n) ? p1.n : p2.n;
-    delete[] arr;
     arr = new int[n];
     for(int i = 0; i < n; i++)
     {
-        if(p1.n < i && p2.n < i)
+        if(i < p1.n && i < p2.n)
         {
             arr[i] = p1.arr[i] + p2.arr[i];
+        }
+        else if(i > p1.n)
+        {
+            arr[i] = p2.arr[i];
+        }
+        else
+        {
+            arr[i] = p1.arr[i];
+        }
+    }
+}
+
+void polynomial :: multiply(polynomial p1, polynomial p2)
+{
+    n = p1.n + p2.n - 1;
+    arr = new int[n];
+    for(int i = 0; i < n; i++)
+    {
+        arr[i] = 0;
+    }
+
+    for(int i = 0; i < p1.n; i++)
+    {
+        for(int j = 0; j < p2.n; j++)
+        {
+            arr[i+j] += p1.arr[i]*p2.arr[j];
         }
     }
 }
 
 int main(){
-    int n;
+    int n_26;
     
     cout << "Enter the highest degree of polynomial: ";
-    cin >> n;
-    n++;
-    int arr[n];
-    for(int i = 0; i < n; i++)
+    cin >> n_26;
+    n_26++;
+    int arr_26[n_26];
+    for(int i = 0; i < n_26; i++)
     {
         cout << "Enter the coefficient of degree " << i << ": ";
-        cin >> arr[i];
+        cin >> arr_26[i];
     }
-    polynomial o1(arr, n);
+    polynomial o1_26(arr_26, n_26);
 
-    cout << "Enter the highest degree of polynomial: ";
-    cin >> n;
-    n++;
-    int arr2[n];
-    for(int i = 0; i < n; i++)
+    cout << "Enter the highest degree of second polynomial: ";
+    cin >> n_26;
+    n_26++;
+    int arr2_26[n_26];
+    for(int i = 0; i < n_26; i++)
     {
         cout << "Enter the coefficient of degree " << i << ": ";
-        cin >> arr2[i];
+        cin >> arr2_26[i];
     }
-    polynomial o2(arr2, n);
-    polynomial o3;
-    o3.add(o1, o2);
-    o1.display();
-    o2.display();
-    o3.display();
-    o3.display();
+    polynomial o2_26(arr2_26, n_26);
+    polynomial o3_26;
+    o3_26.add(o1_26, o2_26);
+    polynomial o4_26;
+    o4_26.multiply(o1_26, o2_26);
+    o1_26.display();
+    o2_26.display();
+    o3_26.display();
+    o4_26.display();
+
     return 0;
 }

@@ -70,17 +70,17 @@ fraction fraction :: multiply(fraction *o1, fraction *o2)
 
 int main()
 {
-    fraction o1, o2, o3, o4, o5;
-    o1.setData(3, 5);
-    o2.setData(4, 9);
+    fraction o1_26, o2_26, o3_26, o4_26, o5_26;
+    o1_26.setData(3, 5);
+    o2_26.setData(4, 9);
 
-    o3 = o3.add(o1, o2);
-    o3.display();
+    o3_26 = o3_26.add(o1_26, o2_26);
+    o3_26.display();
 
-    o4 = o4.subtract(o1, o2);
-    o4.display();
+    o4_26 = o4_26.subtract(o1_26, o2_26);
+    o4_26.display();
 
-    o5 = o5.multiply(&o1, &o2);
-    o5.display();
+    o5_26 = o5_26.multiply(&o1_26, &o2_26);
+    o5_26.display();
     return 0;
 }

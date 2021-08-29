@@ -98,28 +98,28 @@ void vector :: display()
 
 int main()
 {
-    vector p;
-    int x, y, z, n;
-    char ch;
+    vector p_26;
+    int x_26, y_26, z_26, n_26;
+    char ch_26;
     cout << "Enter the coordinates of vector\n";
     cout << "x: ";
-    cin >> x;
+    cin >> x_26;
     cout << "y: ";
-    cin >> y;
+    cin >> y_26;
     cout << "z: ";
-    cin >> z;
-    p.create(x, y, z);
+    cin >> z_26;
+    p_26.create(x_26, y_26, z_26);
 
-    p.modify();
-    p.display();
-    p.multiplyGivenAxis();
-    p.display();
-    p.multiplyAllAxes();
-    p.display();
-    p.divideAllAxes();
-    p.display();
-    p.addAllAxes();
-    p.display();
+    p_26.modify();
+    p_26.display();
+    p_26.multiplyGivenAxis();
+    p_26.display();
+    p_26.multiplyAllAxes();
+    p_26.display();
+    p_26.divideAllAxes();
+    p_26.display();
+    p_26.addAllAxes();
+    p_26.display();
 
     return 0;
 }

@@ -31,7 +31,7 @@ public:
 void age ::showAge()
 {
     int year, months, days;
-    int month[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     
     
     if(birthday.dd > present.dd)
@@ -54,15 +54,15 @@ void age ::showAge()
 
 int main()
 {
-    age ob1;
-    int d, m, y;
+    age ob1_26;
+    int d_26, m_26, y_26;
     cout << "Enter the present date in dd mm yyyy format: ";
-    cin >> d >> m >> y;
-    ob1.setPresent(d, m, y);
+    cin >> d_26 >> m_26 >> y_26;
+    ob1_26.setPresent(d_26, m_26, y_26);
     cout << "Enter the Birth date in dd mm yyyy format: ";
-    cin >> d >> m >> y;
-    ob1.setBirthday(d, m, y);
+    cin >> d_26 >> m_26 >> y_26;
+    ob1_26.setBirthday(d_26, m_26, y_26);
 
-    ob1.showAge();
+    ob1_26.showAge();
     return 0;
 }

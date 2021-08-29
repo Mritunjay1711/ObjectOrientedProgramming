@@ -107,37 +107,37 @@ void showHighest(Student *s, int n)
 }
 
 int main(){
-    int n, roll;
-    char name[20];
-    float marks[5];
+    int n_26, roll_26;
+    char name_26[20];
+    float marks_26[5];
     cout << "Enter the number of students: ";
-    cin >> n;
-    Student cl[n];
-    for(int i = 0; i < n; i++)
+    cin >> n_26;
+    Student cl_26[n_26];
+    for(int i = 0; i < n_26; i++)
     {
         cout << "Enter the name: ";
         getchar();
-        gets(name);
+        gets(name_26);
         cout << "Enter the roll: ";
-        cin >> roll;
+        cin >> roll_26;
         cout << "Enter the marks of 5 subjects:\n";
         for(int j = 0; j < 5; j++)
         {
             cout << "marks[" << j + 1 << "]: ";
-            cin >> marks[j];
+            cin >> marks_26[j];
         }
-        cl[i].setData(name, roll, marks);
+        cl_26[i].setData(name_26, roll_26, marks_26);
     }
-    disAboveAvg(cl, n);
+    disAboveAvg(cl_26, n_26);
     cout << "--------------\n";
-    disBelowAvg(cl, n);
+    disBelowAvg(cl_26, n_26);
     cout << "--------------\n";
-    sortAscend(cl, n);
-    for(int i = 0; i < n; i++)
+    sortAscend(cl_26, n_26);
+    for(int i = 0; i < n_26; i++)
     {
-        cl[i].diplay();
+        cl_26[i].diplay();
     }
     cout << "--------------\n";
-    showHighest(cl, n);
+    showHighest(cl_26, n_26);
     return 0;
 }

@@ -19,6 +19,10 @@ class complex{
             img_26 = o.img_26;
         }
 
+        ~complex()
+        {
+            cout << "Destructor is invoked\n";
+        }
         void display()
         {
             cout << real_26 << " + " << img_26 << "i" << endl;

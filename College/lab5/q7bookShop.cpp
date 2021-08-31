@@ -75,7 +75,6 @@ int main(){
         getchar();
         gets(title_26);
         cout << "Enter the name of author: ";
-        getchar();
         gets(author_26);
         cout << "Enter the price of book: ";
         cin >> price_26;
@@ -86,12 +85,16 @@ int main(){
         cin >> stock_26;
         arr_26[i].setData(title_26, author_26, price_26, publisher_26, stock_26);
     }
+
+    for(int i = 0; i < n_26; i++)
+    {
+        arr_26[i].display();
+    }
     char sTitle_26[30], sAuthor_26[30];
     cout << "Enter the name of book to search: ";
     getchar();
     gets(sTitle_26);
     cout << "Enter the name of author to search: ";
-    getchar();
     gets(sAuthor_26);
     search(arr_26, n_26, sTitle_26, sAuthor_26);
     return 0;

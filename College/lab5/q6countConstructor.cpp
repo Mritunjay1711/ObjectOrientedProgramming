@@ -26,6 +26,8 @@ class complex{
             count_26++;
         }
 
+        ~complex(){}
+
         void display()
         {
             cout << real_26 << " + " << img_26 << "i\n";

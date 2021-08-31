@@ -23,6 +23,10 @@ class time
             min_26 = o.min_26;
         }
 
+        ~time()
+        {
+            cout << "Destructor is invoked\n";
+        }
         void display()
         {
             cout << hour_26 << ":" << min_26 << endl;

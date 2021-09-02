@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 class time{
@@ -12,7 +13,7 @@ class time{
         }
         void display()
         {
-            cout << hour << ":" << min << endl;
+            cout << fixed << setprecision(2) << hour << ":" << fixed << setprecision(2) << min << endl;
         }
 };
 

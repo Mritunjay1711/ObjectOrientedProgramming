@@ -51,20 +51,20 @@ void polynomial :: add(polynomial p1, polynomial p2)
 {
     n = (p1.n > p2.n) ? p1.n : p2.n;
     arr = new int[n];
+    
     for(int i = 0; i < n; i++)
     {
-        if(i < p1.n && i < p2.n)
-        {
-            arr[i] = p1.arr[i] + p2.arr[i];
-        }
-        else if(i > p1.n)
-        {
-            arr[i] = p2.arr[i];
-        }
-        else
-        {
-            arr[i] = p1.arr[i];
-        }
+        arr[i] = 0;
+    }
+
+    for(int i = 0; i < p1.n; i++)
+    {
+        arr[i] += p1.arr[i];
+    }
+
+    for(int i = 0; i < p2.n; i++)
+    {
+        arr[i] += p2.arr[i];
     }
 }
 

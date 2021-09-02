@@ -9,7 +9,8 @@ class Books{
     char *publisher;
     int stock;
     public:
-        void setData(char *t, char *a, float pr, char *p, int st)
+        Books(){}
+        Books(char *t, char *a, float pr, char *p, int st)
         {
             title = new char[strlen(t) + 1];
             author = new char[strlen(a) + 1];
@@ -19,6 +20,17 @@ class Books{
             price = pr;
             strcpy(publisher, p);
             stock = st;
+        }
+        Books(const Books &ob)
+        {
+            title = new char[strlen(ob.title) + 1];
+            author = new char[strlen(ob.author) + 1];
+            publisher = new char[strlen(ob.publisher) + 1];
+            strcpy(title, ob.title);
+            strcpy(author, ob.author);
+            price = ob.price;
+            strcpy(publisher, ob.publisher);
+            stock = ob.stock;
         }
         void display()
         {
@@ -63,40 +75,18 @@ void search(Books *b, int n, char *t, char *a)
 }
 
 int main(){
-    int n_26, stock_26;
-    float price_26;
-    char title_26[30], author_26[30], publisher_26[30];
-    cout << "Enter the number of books: ";
-    cin >> n_26;
-    Books arr_26[n_26];
-    for(int i = 0; i < n_26; i++)
-    {
-        cout << "Enter the name of book: ";
-        getchar();
-        gets(title_26);
-        cout << "Enter the name of author: ";
-        gets(author_26);
-        cout << "Enter the price of book: ";
-        cin >> price_26;
-        cout << "Enter the name of publisher: ";
-        getchar();
-        gets(publisher_26);
-        cout << "Enter the stock present: ";
-        cin >> stock_26;
-        arr_26[i].setData(title_26, author_26, price_26, publisher_26, stock_26);
-    }
+    Books arr_26[3] = {{"DSA", "Reema", 435.00f, "Oxford", 23}, {"OOP", "Balaguru", 424.85f, "MC Graw", 12}, {"Math", "Jay Levore", 452.53f, "Oxford", 9}};
 
-    for(int i = 0; i < n_26; i++)
+    for(int i = 0; i < 3; i++)
     {
         arr_26[i].display();
     }
     char sTitle_26[30], sAuthor_26[30];
     cout << "Enter the name of book to search: ";
-    getchar();
     gets(sTitle_26);
     cout << "Enter the name of author to search: ";
     gets(sAuthor_26);
-    search(arr_26, n_26, sTitle_26, sAuthor_26);
+    search(arr_26, 3, sTitle_26, sAuthor_26);
     return 0;
 }
 

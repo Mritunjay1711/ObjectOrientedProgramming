@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include<iomanip>
 using namespace std;
 
 class books
@@ -24,11 +25,11 @@ class books
         {
             if(count < 1)
             {
-                cout << "SI.No.\tCode\tName\tPrice\tQuantity\tTotal\n";
+                cout << left << setw(6) << "SNo." << left << setw(8) << "Code" << left << setw(15) << "Name" << right << setw(5) << "Price" << right << setw(10) << "Quantity" << right << setw(10) << "Total" << endl;;
                 cout << "--------------------------------------------------------------------\n";
                 count++;
             }
-            cout << count++ << "\t" << code << "\t" << name << "\t" << price << "\t" << quantity << "\t\t" << total << endl;
+            cout << left << setw(6) << count++ << left << setw(8) << code << left << setw(15) << name << right << setw(5) << price << right << setw(10) << quantity << right << setw(10) << total << endl;
         }
 
         friend void calc(books *b, int a);

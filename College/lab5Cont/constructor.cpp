@@ -40,7 +40,7 @@ int main(){
     {
         int j, k;
         cout << "Enter the elements of object " << i + 1 << ": ";
-        test t[i] = test(j, k);
+        test t[i](j, k);
     }
     return 0;
 }

@@ -28,7 +28,7 @@ public:
     void showAge();
 };
 
-void age ::showAge()
+void age :: showAge()
 {
     int year, months, days;
     int month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

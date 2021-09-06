@@ -43,9 +43,9 @@ int complex :: count_26;
 
 int main(){
     complex c1_26;
-    complex c2_26c1_26(2, 5);
-    complex c3_26c1_26(c2_26c1_26);
-    complex c4_26c1_26 = c3_26c1_26;
+    complex c2_26(2, 5);
+    complex c3_26(c2_26);
+    complex c4_26 = c3_26;
     
     complex :: showCount();
     return 0;

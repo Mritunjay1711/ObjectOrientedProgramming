@@ -55,6 +55,8 @@ int main(){
     myStr s2_26(str_26);
     myStr s3_26;
     s3_26.concat(s1_26, s2_26);
+    s1_26.display();
+    s2_26.display();
     s3_26.display();
     return 0;
 }

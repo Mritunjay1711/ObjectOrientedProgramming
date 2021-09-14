@@ -10,7 +10,7 @@ class Books{
     int stock;
     public:
         Books(){}
-        Books(char *t, char *a, float pr, char *p, int st)
+        Books(char const *t, char const *a, float pr, char const *p, int st)
         {
             title = new char[strlen(t) + 1];
             author = new char[strlen(a) + 1];

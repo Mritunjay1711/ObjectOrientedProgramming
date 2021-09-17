@@ -60,28 +60,28 @@ public:
 };
 
 int main(){
-    int rad, l, br, a, b, c;
-    circle c1;
-    triangle t1;
-    rectangle r1;
+    int rad_26, l_26, br_26, a_26, b_26, c_26;
+    circle c1_26;
+    triangle t1_26;
+    rectangle r1_26;
     cout << "Radius: ";
-    cin >> rad;
+    cin >> rad_26;
     cout << "Sides of rectangle:\n";
     cout << "Length: ";
-    cin >> l;
+    cin >> l_26;
     cout << "Breadth: ";
-    cin >> br;
+    cin >> br_26;
     cout << "Sides of triangle: ";
-    cin >> a >> b >> c;
-    c1.getData(rad);
-    c1.calc();
-    r1.getData(l, br);
-    r1.calc();
-    t1.getData(a, b, c);
-    t1.calc();
+    cin >> a_26 >> b_26 >> c_26;
+    c1_26.getData(rad_26);
+    c1_26.calc();
+    r1_26.getData(l_26, br_26);
+    r1_26.calc();
+    t1_26.getData(a_26, b_26, c_26);
+    t1_26.calc();
 
-    c1.display();
-    r1.display();
-    t1.display();
+    c1_26.display();
+    r1_26.display();
+    t1_26.display();
     return 0;
 }

@@ -85,66 +85,66 @@ public:
 
 int main()
 {
-    batsman ob1;
-    bowler ob2;
+    batsman ob1_26;
+    bowler ob2_26;
 
-    char n[20], t[10];
-    int ag, jno, nodi, run, hc, c, hs, ns, ls, wc;
-    float avg, sr, rr, econ, sp;
+    char n_26[20], t_26[10];
+    int ag_26, jno_26, nodi_26, run_26, hc_26, c_26, hs_26, ns_26, ls_26, wc_26;
+    float avg_26, sr_26, rr_26, econ_26, sp_26;
 
     cout << "Enter the data for batsman:\n";
     cout << "Name: ";
-    gets(n);
+    gets(n_26);
     cout << "Age: ";
-    cin >> ag;
+    cin >> ag_26;
     cout << "Jersey No: ";
-    cin >> jno;
+    cin >> jno_26;
     cout << "ODIs Played: ";
-    cin >> nodi;
+    cin >> nodi_26;
     cout << "Runstaken: ";
-    cin >> run;
+    cin >> run_26;
     cout << "Average: ";
-    cin >> avg;
+    cin >> avg_26;
     cout << "Half centuries: ";
-    cin >> hc;
+    cin >> hc_26;
     cout << "Centuries: ";
-    cin >> c;
+    cin >> c_26;
     cout << "Strike rate: ";
-    cin >> sr;
+    cin >> sr_26;
     cout << "Highest score: ";
-    cin >> hs;
+    cin >> hs_26;
     cout << "No. of sixes: ";
-    cin >> ns;
+    cin >> ns_26;
     cout << "Longest six: ";
-    cin >> ls;
-    ob1.getData(n, ag, jno, nodi, run, avg, hc, c, sr, hs, ns, ls);
+    cin >> ls_26;
+    ob1_26.getData(n_26, ag_26, jno_26, nodi_26, run_26, avg_26, hc_26, c_26, sr_26, hs_26, ns_26, ls_26);
 
     cout << "Enter the data for bowler:\n";
     cout << "Name: ";
     getchar();
-    gets(n);
+    gets(n_26);
     cout << "Age: ";
-    cin >> ag;
+    cin >> ag_26;
     cout << "Jersey No: ";
-    cin >> jno;
+    cin >> jno_26;
     cout << "ODIs Played: ";
-    cin >> nodi;
+    cin >> nodi_26;
     cout << "Type: ";
     getchar();
-    gets(t);
+    gets(t_26);
     cout << "Wickets Taken: ";
-    cin >> wc;
+    cin >> wc_26;
     cout << "Runrate: ";
-    cin >> rr;
+    cin >> rr_26;
     cout << "Speed: ";
-    cin >> sp;
+    cin >> sp_26;
     cout << "Economy: ";
-    cin >> econ;
-    ob2.getData(n, ag, jno, nodi, t, wc, rr, sp, econ);
+    cin >> econ_26;
+    ob2_26.getData(n_26, ag_26, jno_26, nodi_26, t_26, wc_26, rr_26, sp_26, econ_26);
 
     cout << "Displaying data for Batsman:\n";
-    ob1.display();
+    ob1_26.display();
     cout << "Displaying data for Bowler:\n";
-    ob2.display();
+    ob2_26.display();
     return 0;
 }

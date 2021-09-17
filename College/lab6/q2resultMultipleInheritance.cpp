@@ -100,23 +100,23 @@ public:
 };
 
 int main(){
-    result ob1;
-    char *n;
-    int r, a, m[5];
+    result ob1_26;
+    char n_26[20];
+    int r_26, a_26, m_26[5];
 
     cout << "Enter the data: \n";
     cout << "Name: ";
-    gets(n);
+    gets(n_26);
     cout << "Roll: ";
-    cin >> r;
+    cin >> r_26;
     cout << "Age: ";
-    cin >> a;
+    cin >> a_26;
     cout << "Enter the marks for 5 subjects: ";
     for(int i = 0; i < 5; i++)
     {
-        cin >> m[i];
+        cin >> m_26[i];
     }
-    ob1.getData(n, r, a, m);
-    ob1.display();
+    ob1_26.getData(n_26, r_26, a_26, m_26);
+    ob1_26.display();
     return 0;
 }

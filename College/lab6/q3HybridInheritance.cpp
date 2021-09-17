@@ -105,28 +105,28 @@ public:
 };
 
 int main(){
-    result ob1;
-    char *n;
-    int r, a, m[3], act[2];
+    result ob1_26;
+    char n_26[20];
+    int r_26, a_26, m_26[3], act_26[2];
 
     cout << "Enter the data: \n";
     cout << "Name: ";
-    gets(n);
+    gets(n_26);
     cout << "Roll: ";
-    cin >> r;
+    cin >> r_26;
     cout << "Age: ";
-    cin >> a;
+    cin >> a_26;
     cout << "Enter the marks for 3 subjects: ";
     for(int i = 0; i < 3; i++)
     {
-        cin >> m[i];
+        cin >> m_26[i];
     }
     cout << "Enter the 2 activity marks: ";
-    cin >> act[0] >> act[1];
-    ob1.getStudData(n, r, a);
-    ob1.getTestData(m);
-    ob1.setActData(act);
-    ob1.showTotal();
-    ob1.display();
+    cin >> act_26[0] >> act_26[1];
+    ob1_26.getStudData(n_26, r_26, a_26);
+    ob1_26.getTestData(m_26);
+    ob1_26.setActData(act_26);
+    ob1_26.showTotal();
+    ob1_26.display();
     return 0;
 }

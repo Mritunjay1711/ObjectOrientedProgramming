@@ -78,47 +78,47 @@ public:
 
 int main()
 {
-    allrounder ob1;
-    int runs, cen, hcen, wickets, noHatric;
-    float avg, strikeRate, runrate, speed;
-    char type[10], bestFigure[10];
-    int nomom, noim, noc, icc, spom;
+    allrounder ob1_26;
+    int runs_26, cen_26, hcen_26, wickets_26, noHatric_26;
+    float avg_26, strikeRate_26, runrate_26, speed_26;
+    char type_26[10], bestFigure_26[10];
+    int nomom_26, noim_26, noc_26, icc_26, spom_26;
 
     cout << "Runs: ";
-    cin >> runs;
+    cin >> runs_26;
     cout << "Average: ";
-    cin >> avg;
+    cin >> avg_26;
     cout << "Half Centuries: ";
-    cin >> hcen;
+    cin >> hcen_26;
     cout << "Centuries: ";
-    cin >> cen;
+    cin >> cen_26;
     cout << "Strike Rate: ";
-    cin >> strikeRate;
+    cin >> strikeRate_26;
     cout << "Type: ";
-    cin >> type;
+    cin >> type_26;
     cout << "Wickets Taken: ";
-    cin >> wickets;
+    cin >> wickets_26;
     cout << "Runrate: ";
-    cin >> runrate;
+    cin >> runrate_26;
     cout << "Speed: ";
-    cin >> speed;
+    cin >> speed_26;
     cout << "Best Figure: ";
-    cin >> bestFigure;
+    cin >> bestFigure_26;
     cout << "Man of the Match: ";
-    cin >> nomom;
+    cin >> nomom_26;
     cout << "No. of International Matches: ";
-    cin >> noim;
+    cin >> noim_26;
     cout << "No. of catches: ";
-    cin >> noc;
+    cin >> noc_26;
     cout << "ICC Ranking: ";
-    cin >> icc;
+    cin >> icc_26;
     cout << "Stylish player of the match: ";
-    cin >> spom;
+    cin >> spom_26;
 
-    ob1.getDataBatsman(runs, avg, hcen, cen, strikeRate);
-    ob1.getDataBowler(type, wickets, runrate, speed, bestFigure);
-    ob1.getDataAll(nomom, noim, noc, icc, spom);
+    ob1_26.getDataBatsman(runs_26, avg_26, hcen_26, cen_26, strikeRate_26);
+    ob1_26.getDataBowler(type_26, wickets_26, runrate_26, speed_26, bestFigure_26);
+    ob1_26.getDataAll(nomom_26, noim_26, noc_26, icc_26, spom_26);
     cout << "Displaying the Data:\n";
-    ob1.display();
+    ob1_26.display();
     return 0;
 }

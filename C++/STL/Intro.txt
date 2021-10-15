@@ -1,0 +1,25 @@
+STL = Containers + Algo + Iterators
+
+    
+    Containers-> Objects which store data
+    Algo -> Procedure to process data
+    Iterators -> Object which points to an elements of a Containers
+
+Container -> Sequence Containers -> Linear fashion O->O->O -> Vector, List, DEQueue
+          -> Associative Containers -> Direct Access -> Set/Multiset, Map/Multimap
+          -> Derived Containers -> Real world modelling -> Stack, Queue, PQueue
+
+
+Sequence Containers
+    1. Vector -> RA(Random Access) = Fast
+                 Insertion/Del in middle = slow
+                 Insertion at the end = fast
+    2. List -> RA = slow
+               Insertion/Del in middle = fast
+               Insertion/Del at end = fast
+
+Associative Containers
+        -> All operation fast except RA
+
+Derived Containers
+        -> Depends -> Data Structure

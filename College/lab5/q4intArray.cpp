@@ -37,7 +37,7 @@ public:
         delete[] arr;
     }
 
-    void concatArray(myArr o1, myArr o2);
+    void concatArray(myArr &o1, myArr &o2);
 
     void display()
     {
@@ -49,7 +49,7 @@ public:
     }
 };
 
-void myArr ::concatArray(myArr o1, myArr o2)
+void myArr ::concatArray(myArr &o1, myArr &o2)
 {
     len = o1.len + o2.len;
     delete[] arr;
@@ -58,10 +58,10 @@ void myArr ::concatArray(myArr o1, myArr o2)
     for (i = 0; i < o1.len; i++)
     {
         arr[i] = o1.arr[i];
-        if(i < o2.len)
-        {
-            arr[i + o1.len] = o2.arr[i];
-        }
+    }
+    for(i = 0; i < o2.len; i++)
+    {
+        arr[o1.len + i] = o2.arr[i];
     }
 }
 

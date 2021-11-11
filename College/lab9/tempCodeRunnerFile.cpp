@@ -1,0 +1,11 @@
+cout << "Enter the account number: ";
+    // cin >> acc_num;
+    // cout << "Enter the name: ";
+    // cin >> name;
+    // cout << "Enter the balance: ";
+    // cin >> balance;
+    // savings ob1(acc_num, name, balance);
+    // bptr = &ob1;
+    // bptr->deposit(500);
+    // bptr->withdraw(2000);
+    // bptr->display();

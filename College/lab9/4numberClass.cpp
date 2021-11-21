@@ -5,9 +5,9 @@ using namespace std;
 class Number
 {
 protected:
-    int num;
+    int num_26;
 public:
-    Number(int a = 0){num = a;}
+    Number(int a = 0){num_26 = a;}
     virtual void display() = 0;
 };
 
@@ -17,7 +17,7 @@ public:
     hexadecimal(int a) : Number(a){}
     void display()
     {
-        cout << "Number: " << hex << num << endl;
+        cout << "Number: " << hex << num_26 << endl;
     }
 };
 
@@ -27,7 +27,7 @@ public:
     octal(int a) : Number(a){}
     void display()
     {
-        cout << "Number: " << oct << num << endl;
+        cout << "Number: " << oct << num_26 << endl;
     }
 };
 
@@ -37,7 +37,7 @@ public:
     decimal(int a) : Number(a){}
     void display()
     {
-        cout << "Number: " << num << endl;
+        cout << "Number: " << num_26 << endl;
     }
 };
 

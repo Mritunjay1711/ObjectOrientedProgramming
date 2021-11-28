@@ -19,7 +19,7 @@ public:
     {
         return (rear + 1) % size == front;
     }
-    void push(T data)
+    void enqueue(T data)
     {
         if(isFull())
             cout << "Queue overflow!\n";
@@ -27,16 +27,16 @@ public:
         {
             front = rear = 0;
             arr[rear] = data;
-            cout << "Pushed " << data << endl;
+            cout << "enqueueed " << data << endl;
         }
         else
         {
             rear = (++rear) % size;
             arr[rear] = data;
-            cout << "Pushed " << data << endl;
+            cout << "enqueueed " << data << endl;
         }
     }
-    T pop()
+    T dequeue()
     {
         T val;
         if(isEmpty())
@@ -67,16 +67,16 @@ public:
 
 int main(){
     Queue<int, 5> obj;
-    obj.push(4);
-    obj.push(5);
-    obj.push(6);
-    obj.push(7);
-    obj.push(8);
-    obj.pop();
-    obj.pop();
-    obj.pop();
-    obj.push(10);
-    obj.push(9);
+    obj.enqueue(4);
+    obj.enqueue(5);
+    obj.enqueue(6);
+    obj.enqueue(7);
+    obj.enqueue(8);
+    obj.dequeue();
+    obj.dequeue();
+    obj.dequeue();
+    obj.enqueue(10);
+    obj.enqueue(9);
     obj.display();
     return 0;
 }

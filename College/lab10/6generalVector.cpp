@@ -38,7 +38,7 @@ void vector<T> :: modify(T newVal, int index)
 {
     if(index > size - 1)
     {
-        cout << "Invalid index!\n"
+        cout << "Invalid index!\n";
         return;
     }
     arr[index] = newVal;

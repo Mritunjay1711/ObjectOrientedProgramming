@@ -1,42 +1,21 @@
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
+#include<iostream>
 using namespace std;
-int main()
+
+class A
 {
-    ofstream out;
-    out.open("questions.txt");
-    out << "Who is the prime minister of India?" << endl;
-    out << "Which virus spread recently in Africa?" << endl;
-    out << "Who won FIFA 2014 worldcup?" << endl;
-    out.close();
+public:
+    virtual void fun1() = 0;
+    virtual void fun2(){}
+};
 
-    out.open("answers.txt");
-    out << "Narendra modi" << endl;
-    out << "Ebola" << endl;
-    out << "Germany" << endl;
-    out.close();
+class B : public A
+{
+    public:
+        void fun3(){cout << "hello";}
+};
 
-    char q[100], a[50];
-    ifstream in;
-    in.open("questions.txt");
-    cout << "************** SAMPLE QUESTIONS**************";
-    while (in)
-    {
-        in.getline(q, 100);
-        cout << endl
-             << q;
-    }
-    in.close();
-
-    in.open("answers.txt");
-    cout << "\n\n\n********************ANSWERS****************";
-    in.seekg(0);
-    while (in)
-    {
-        in.getline(a, 50);
-        cout << endl
-             << a;
-    }
-    in.close();
+int main(){
+    // B ob;  // cannot be done as fun1() is not overridden.
+    // ob.fun3();
+    return 0;
 }

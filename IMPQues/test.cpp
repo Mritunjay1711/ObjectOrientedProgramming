@@ -1,70 +1,38 @@
-#include<iostream>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
-template <class T, int size>
-
-class stack
-{
-private:
-    T *arr;
-    int top;
-public:
-    stack()
-    {
-        arr = new T[size];
-        top = -1;
-    }
-    void push()
-    {
-        if (top == size - 1)
-        {
-            cout << "\nStack overflow";
-            return;
-        }
-        T p;
-        cout << "\nEnter the element to be pushed - ";
-        cin >> p;
-        top++;
-        arr[top] = p;
-    }
-    T pop()
-    {
-        T p = arr[top];
-        top--;
-        return p;
-    }
-    void display()
-    {
-        for (int i = top; i >= 0; i--)
-        {
-            cout << "\n" << arr[i];
-        }
-    }
-};
-
 int main()
 {
-    stack <int, 10> s;
-    int p;
-    s.display();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.push();
-    s.display();
-    p = s.pop();
-    cout << "\nThe element popped is - " << p;
-    s.display();
+    int number, a;
+    fstream myFile;
+    myFile.open("text.txt", ios ::in | ios ::out | ios ::trunc);
+    do
+    {
+        cout << "Enter the number: ";
+        scanf("%d", &number);
+
+        if (number > 0)
+        {
+            myFile << number;
+        }
+        else
+        {
+            break;
+        }
+        cout << "Do you want to continue 1 for yes 0 for no\n";
+        cin >> a;
+
+    } while (a);
+    char c;
+    myFile.seekg(0, ios ::end);
+    int size = myFile.tellg();
+    for (int i = 1; i <= size; i++)
+    {
+        myFile.seekg(-i, ios::end);
+        myFile.get(c);
+        printf("%c ", c);
+    }
     return 0;
 }

@@ -30,8 +30,7 @@ public:
 
 int main(){
     fstream file;
-    student ob[4], ob1;
-    student ob2[5];
+    student ob[3], ob1, ob2;
     file.open("Insertion.txt", ios :: out | ios :: in | ios :: trunc);
     for(int i = 0; i < 2; i++)
     {
@@ -46,7 +45,7 @@ int main(){
 
     cout << "Enter the data to insert: ";
     ob1.getData();
-
+    int flag = 0;
     for(int i = 0; i < 2; i++)
     {
         file.read((char*)&ob[i], sizeof(ob[i]));
@@ -54,23 +53,26 @@ int main(){
         if(ob[i].roll == 243)
         {
             file2.write((char*)&ob1, sizeof(ob1));
+            flag = 1;
         }
     }
+    if(!flag)
+        cout << "Roll not found!\n";
 
-    // remove("Insertion.txt");
-    // rename("copying.txt", "Insertion2.txt");
+    file.close();
     file2.close();
-    file2.open("copying.txt", ios :: in);
+    remove("Insertion.txt");
+    rename("copying.txt", "Insertion.txt");
+    file2.open("Insertion.txt", ios :: in);
     file2.seekp(0);
 
     cout << "Output:\n";
-    for(int i = 0; i < 3; i++)
+    while(file2)
     {
-        file2.read((char*)&ob2[i], sizeof(ob2[i]));
-        ob2[i].display();
+        file2.read((char*)&ob2, sizeof(ob2));
+        ob2.display();
         cout << endl;
     }
-    file.close();
     file2.close();
     return 0;
 }

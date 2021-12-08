@@ -36,11 +36,20 @@ public:
         averageMarks = ob.averageMarks;
     }
 
-    // ~student()
-    // {
-    //     delete[] name;
-    // }
+    ~student()
+    {
+        delete[] name;
+    }
 
+    student operator=(student ob)
+    {
+        name = new char[strlen(ob.name) + 1];
+        strcpy(name, ob.name);
+        age = ob.age;
+        roll = ob.roll;
+        averageMarks = ob.averageMarks;
+        return *this;
+    }
     void display()
     {
         cout << "Name: " << name << endl;

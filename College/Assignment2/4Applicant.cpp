@@ -2,7 +2,7 @@
 #include<fstream>
 using namespace std;
 
-class student
+class Applicant
 {
     char Rno[10];
     char name[20];
@@ -34,7 +34,7 @@ public:
 void DisplayContent(fstream &file)
 {
     file.seekg(0);
-    student ob;
+    Applicant ob;
     while(file)
     {
         file.read((char*)&ob, sizeof(ob));
@@ -44,16 +44,16 @@ void DisplayContent(fstream &file)
 }
 
 int main(){
-     fstream file;
-    file.open("3Stud.dat", ios :: in | ios :: out | ios :: trunc);
-    student ob;
+    fstream file;
+    file.open("4Apply.dat", ios :: in | ios :: out | ios :: trunc);
+    Applicant ob;
     int n;
     cout << "Enter the number of data to insert: ";
     cin >> n;
 
     for(int i = 0; i < n; i++)
     {
-        cout << "Enter the data for student[" << i << "]: \n";
+        cout << "Enter the data for Applicant[" << i << "]: \n";
         ob.enroll();
         file.write((char*)&ob, sizeof(ob));
     }

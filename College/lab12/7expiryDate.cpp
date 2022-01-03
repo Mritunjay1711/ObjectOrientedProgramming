@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     time_t now = time(0); // Gives Current time and date
-    tm *ltm = localtime(&now); // To take year, month and data separately
+    tm *ltm = localtime(&now); // To take year, month and date separately
     int year = 1900 + ltm->tm_year; // Year
     int month = 1 + ltm->tm_mon; // Month
     int date = ltm->tm_mday; // Date

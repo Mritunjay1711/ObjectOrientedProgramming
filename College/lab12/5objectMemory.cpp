@@ -27,8 +27,8 @@ int main(){
     student *t1, *t2 = NULL;
     try
     {
-        t1 = new student("Mritunjay", 26, 9.76f);
-        if(t2 == NULL)
+        t1 = new student[30];
+        if(t1 == NULL)
             throw 1;
         else
             cout << "Memory allocated!\n";

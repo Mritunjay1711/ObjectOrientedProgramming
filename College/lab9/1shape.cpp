@@ -4,8 +4,9 @@ using namespace std;
 
 class shape
 {
-public:
+protected:
     float area_26;
+public:
     virtual void calcArea_26(){}
     virtual void display()
     {

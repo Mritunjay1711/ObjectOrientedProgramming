@@ -10,7 +10,7 @@ int main(){
         cout << "File doesnot exist!\n";
         exit(1);
     }
-
+    
     while(file)
     {
         file >> ch;

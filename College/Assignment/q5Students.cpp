@@ -23,7 +23,7 @@ class Student{
             total_marks = sum;
             average = sum/5;
         }
-        void diplay()
+        void display()
         {
             cout << "Name: " << name << endl;
             cout << "Roll: " << roll << endl;
@@ -61,7 +61,7 @@ void disAboveAvg(Student *s, int n)
     {
         if(s[i].total_marks > Student :: avgClass)
         {
-            s[i].diplay();
+            s[i].display();
         }
     }
 }
@@ -73,7 +73,7 @@ void disBelowAvg(Student *s, int n)
     {
         if(s[i].total_marks < Student :: avgClass)
         {
-            s[i].diplay();
+            s[i].display();
         }
     }
 }
@@ -103,7 +103,7 @@ void showHighest(Student *s, int n)
         if(temp.total_marks < s[i].total_marks)
             temp = s[i];
     }
-    temp.diplay();
+    temp.display();
 }
 
 int main(){
@@ -135,7 +135,7 @@ int main(){
     sortAscend(cl_26, n_26);
     for(int i = 0; i < n_26; i++)
     {
-        cl_26[i].diplay();
+        cl_26[i].display();
     }
     cout << "--------------\n";
     showHighest(cl_26, n_26);
